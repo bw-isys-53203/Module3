@@ -1,0 +1,92 @@
+
+body {
+    background-color: rgb(255, 255, 255);  
+}
+
+#main-screen, 
+#settings-screen,
+#data-screen,
+#demo-screen {
+    background-color: #ab9ce6ea;   
+}
+
+.screen-container {
+    border-radius: 40px;  
+    width: 375px;
+    height: 812px;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); 
+    overflow: hidden; 
+    position: relative;
+    border: 4px solid black; 
+}
+
+#lineGraph {
+    height: 75vh !important; /* 50vh = 50% of viewport height */
+}
+  
+#data-screen .flex.flex-col { /* More specific selector targeting the correct div */
+    flex-grow: 1; /* Allow this container to expand vertically */
+}
+
+#chartdiv {
+    position: relative; /* Or use absolute, fixed, or sticky as needed */
+    width: 100%;
+    height: 300px;
+    z-index: 9999; /* Add a very high z-index value */ 
+}
+
+.nav-background {
+    background-color: #faa8d9;  /* Your pink color */
+}
+
+.babytitle {
+    font-size: 24px;
+    color: purple;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+/* Add this to your CSS */
+#main-screen, #demo-screen {
+    position: relative;
+}
+
+#main-screen::before {
+    content: '';
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 375px; /* Adjust size as needed */
+    height: 812px; /* Adjust size as needed */
+    background-image: url('BabyWatermark.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.1; /* Adjust opacity as needed (0.1 = very faint, 0.3 = more visible) */
+    z-index: 0; /* Places it behind other content */
+    pointer-events: none; /* Ensures it doesn't interfere with clicks */
+}
+
+#demo-screen::before {
+    content: '';
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 375px; /* Adjust size as needed */
+    height: 812px; /* Adjust size as needed */
+    background-image: url('BabyWatermark.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.1; /* Adjust opacity as needed (0.1 = very faint, 0.3 = more visible) */
+    z-index: 0; /* Places it behind other content */
+    pointer-events: none; /* Ensures it doesn't interfere with clicks */
+}
+
+/* Ensure other content stays on top */
+#main-screen, #demo-screen > * {
+    position: relative;
+    z-index: 1;
+}

@@ -1,0 +1,48 @@
+/* Light Theme */
+:root {
+    --primary-color: #ffffff; /* Light background */
+    --secondary-color: #333;  /* Dark text */
+    --accent-color: #007bff;   /* Blue accent */
+  }
+  
+  body {
+    background-color: #ffffff; 
+    color: var(--secondary-color); 
+  }
+  
+  #main-screen,
+  #settings-screen,
+  #data-screen,
+  #demo-screen {
+    background-color: var(--primary-color); /* Match body background */
+    border: 4px solid #000000; /* Lighter border */
+  }
+  
+  .screen-container {
+    /* Keep the same styles as in purple.css for consistency */
+    border-radius: 40px; 
+    width: 375px;
+    height: 812px;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); 
+    overflow: hidden;
+    position: relative;
+    /* border: 4px solid black; Use a lighter border for light theme */
+  }
+
+#lineGraph {
+    height: 75vh !important; /* 50vh = 50% of viewport height */
+}
+
+#data-screen .flex.flex-col { /* More specific selector targeting the correct div */
+    flex-grow: 1; /* Allow this container to expand vertically */
+}
+
+.nav-background {
+  background-color: #e5e7eb;  /* Light gray */
+}
+
+.babytitle {
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.723);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
