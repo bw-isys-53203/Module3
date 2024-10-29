@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const themeLink = document.createElement('link');
             themeLink.id = 'theme-stylesheet';
             themeLink.rel = 'stylesheet';
-            themeLink.href = `/CSS/${themeName}.css`; 
+            themeLink.href = `/Module3/CSS/${themeName}.css`; 
             document.head.appendChild(themeLink);
         }
     }
